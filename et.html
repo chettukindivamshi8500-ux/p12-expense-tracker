@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Expense Tracker</title>
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Floating Background -->
+    <div class="bg-shape shape1"></div>
+    <div class="bg-shape shape2"></div>
+
+    <div class="container">
+
+        <!-- Header -->
+        <header class="header">
+            <h1>💰 Expense Tracker</h1>
+            <p>Manage your daily expenses professionally</p>
+        </header>
+
+        <!-- Form Card -->
+        <section class="card form-card">
+
+            <h2>Add Expense</h2>
+
+            <div class="form-grid">
+
+                <div class="input-group">
+                    <label for="en">Expense Name</label>
+                    <input
+                        type="text"
+                        id="en"
+                        placeholder="Enter expense name">
+                </div>
+
+                <div class="input-group">
+                    <label for="a">Amount</label>
+                    <input
+                        type="number"
+                        id="a"
+                        placeholder="Enter amount">
+                </div>
+
+                <div class="input-group">
+                    <label for="c">Category</label>
+                    <select id="c">
+                        <option value="Food">Food</option>
+                        <option value="Travel">Travel</option>
+                        <option value="Shopping">Shopping</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+
+                <div class="input-group">
+                    <label for="date">Date</label>
+                    <input type="date" id="date">
+                </div>
+
+            </div>
+
+            <button id="addexpenses">
+                ➕ Add Expense
+            </button>
+
+        </section>
+
+        <!-- Total Card -->
+        <section class="card total-card">
+
+            <div class="total-left">
+
+                <h3>Total Expense</h3>
+
+                <h1>
+                    ₹ <span id="te">0</span>
+                </h1>
+
+            </div>
+
+            <div class="total-right">
+
+                <div class="circle">
+                    💳
+                </div>
+
+            </div>
+
+        </section>
+
+        <!-- Table Card -->
+        <section class="card table-card">
+
+            <div class="table-header">
+
+                <h2>Expense History</h2>
+
+            </div>
+
+            <div class="table-responsive">
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Amount</th>
+                            <th>Category</th>
+                            <th>Date</th>
+                            <th colspan="2">Action</th>
+
+                        </tr>
+
+                    </thead>
+
+                    <tbody id="l">
+
+                        <!-- Empty State -->
+
+                        <tr id="emptyRow">
+
+                            <td colspan="7" class="empty-state">
+
+                                📂 No expenses added yet.
+
+                            </td>
+
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+        </section>
+
+    </div>
+
+    <!-- Toast Notification -->
+
+    <div id="toast" class="toast">
+
+        Expense Added Successfully
+
+    </div>
+
+    <!-- JavaScript -->
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
